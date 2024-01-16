@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body {
+    margin: 50px;
+    background: #3A405A;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+
+   nav{
+ border-radius: 5px;
+ margin-top: 5px;
+ margin-left: 5px;
+ margin-right: 5px;
+ position: fixed;
+ left: 0;
+ right: 0;
+ top: 0;
+ width: auto;
+ height: 60px;
+ background: #24475c;
+ box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+nav .navbar{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 100%;
+ max-width: 90%;
+ /* background: #ffffff; */
+ margin: auto;
+}
+/* nav .navbar .logo a{
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+} */
+
+nav .navbar .menu{
+  display: flex;
+}
+.navbar .menu li{
+  list-style: none;
+  margin: 0 15px;
+}
+.navbar .menu li a{
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+}
+  
+h2{
+    font-size: 60px;
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 50px;
+}
+.head {
+margin-top: 200px;
+margin-bottom: 200px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.head h2 {
+  font-size: 100px;
+  color: white;
+  
+}
+.head p{
+    padding-top: 20px;
+    color: white;
+    align-items: end;
+    justify-content: end;
+}
+.about{
+    border-radius: 50px;
+    padding: 20px;
+    box-shadow:  20px 20px 60px #31364d,
+             -20px -20px 60px #434a68;
+    /* background: #ffffff; */
+    display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+.about img{
+    border-radius: 50px;
+    width: 30%;
+    height: auto;
+}
+.about p{
+    color: #ffffff;
+    padding-right: 50px;
+}
+.awards{
+    border-radius: 50px;
+    padding: 20px;
+    box-shadow:  20px 20px 60px #31364d,
+             -20px -20px 60px #434a68;
+    /* background: #ffffff; */
+    display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+.awards img{
+    border-radius: 50px;
+    width: 30%;
+    height: auto;
+}
+.awards p{
+    color: #ffffff;
+    padding-left: 50px;
+}
+
+.projects{
+    border-radius: 10px;
+    padding: 20px;
+    /* background: #ffffff; */
+    display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+.card {
+    box-shadow:  20px 20px 60px #31364d,
+             -20px -20px 60px #434a68;
+  width: 17em;
+  height: 22.5em;
+  /* background: #171717; */
+  transition: 1s ease-in-out;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card span {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 1em;
+}
+
+.card .info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 0.72em;
+  margin: 1em;
+}
+
+.card .img {
+  width: 4.8em;
+  height: 4.8em;
+  background: white;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.card a:hover {
+  color: red;
+}
+
+.card button {
+  padding: 0.8em 1.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: .4s ease-in-out;
+}
+
+.card button:hover {
+  background: red;
+  color: white;
+  cursor: pointer;
+}
+.gallery {
+    /* box-shadow:  20px 20px 60px #31364d,
+             -20px -20px 60px #434a68; */
+    border-radius: 10px;
+    padding: 20px;
+    /* background: #ffffff; */
+    /* display:block;
+  align-items: center;
+  justify-content: space-evenly; */
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+<body>
+    <nav>
+        <div class="navbar">
+          <!-- <div class="logo">
+            <a href="#">Portfolio</a>
+            </div> -->
+          <ul class="menu">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Awards">Awards</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+<main>
+    <div class="head">
+        <h2>I'm,Thushar</h2>
+        <p>Flutter Developer | Traveller | Photographer</p>   
+    <!-- <img src="7D4B7E89-B303-4E0A-AD1B-454C2B253C16-removebg-preview.png" alt=""> -->
+</div>             
+<h2>About Me</h2>
+<div class="about">
+    <p>Thushar, an intermediate Flutter developer with a passion for crafting dynamic and engaging mobile applications. Beyond coding, he is a hardcore travel enthusiast, 
+        seeking inspiration from diverse cultures and landscapes around the globe. As a beginner-level photographer, Thushar captures the beauty of his journeys through a lens, blending his technical skills with a keen eye for visual storytelling. With a unique blend of technical expertise and a love for exploration, Thushar is on a journey to seamlessly merge the worlds of technology, travel, and photography.</p>
+    <img src="DSCN2952.JPG">
+</div>
+<br><br><br><br>
+<h2>Awards</h2>
+<div class="awards">
+    <img src="DSCN2952.JPG">
+    <p>The record for covering the maximum number of Indian states and union territories in a solo roundtrip motorcycle expedition was set by T. Thushar (born on March 21, 2004) of Tiruvallur, Tamil Nadu. He started his expedition on May 18, 2023 at 5.28 am from Ayanambakkam (Chennai) and completed it at 7.49 pm at Ayanambakkam (Chennai) on June 18, 2023; covering 21 Indian states and 4 union territories (12,521.8 km) in 31 days on his Royal Enfield Thunderbird 350 at the age of 19 years, 3 months and 13 days as confirmed on July 3, 2023.</p>
+</div>
+<br><br><br><br>
+<h2>Projects</h2>
+<div class="projects">
+    <div class="card">
+        <div class="img"></div>
+        <span>Random Joke Generator</span>
+        <p class="info">Simple Joke Generator in flutter using rest api</p>
+      <button>View Project</button>
+      </div>
+      <div class="card">
+        <div class="img"></div>
+        <span>Simple Calculator</span>
+        <p class="info">Simple Calculator app developed using flutter</p>
+      <button>View Project</button>
+      </div>
+      
+</div>
+<br><br><br><br>
+<h2>Photographs</h2>
+<div class="gallery">
+    <div class="row">
+        <div class="column">
+          <img src="1.jpg">
+          <img src="3.jpg">
+          <img src="5.jpg">
+          <img src="2.jpg">
+        </div>
+        <div class="column">
+            <img src="2.jpg">
+            <img src="4.jpg">
+            <img src="5.jpg">
+            <img src="1.jpg">
+        </div>
+        <div class="column">
+            <img src="1.jpg">
+            <img src="3.jpg">
+            <img src="4.jpg">
+            <img src="5.jpg">
+        </div>
+      </div>
+</div>
+<br><br><br><br>
+</main>
+        </body>
+</html>
