@@ -36,7 +36,7 @@
  top: 0;
  width: auto;
  height: 60px;
- background: #24475c;
+ background: rgb(188, 99, 99);
  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 nav .navbar{
@@ -71,7 +71,7 @@ nav .navbar .menu{
   
 h2{
   margin-left: 40px;
-    font-size: 60px;
+    font-size: 50px;
     color: white;
     padding-bottom: 20px;
     padding-top: 50px;
@@ -91,7 +91,7 @@ margin-bottom: 200px;
   font-family: "pacifico";
   font-weight: 50;
   font-size: 90px;
-  color: white;
+  color: rgb(207, 113, 113);
   
 }
 .head p{
@@ -173,7 +173,7 @@ margin-bottom: 200px;
 }
 
 .about{
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 20px;
     box-shadow:  20px 20px 60px #31364d,
              -20px -20px 60px #434a68;
@@ -185,16 +185,17 @@ margin-bottom: 200px;
   
 }
 .about img{
-    border-radius: 20px;
+    border-radius: 10px;
     width: 30%;
     height: auto;
 }
 .about h3{
-    color: #ffffff;
-    padding-right: 50px;
+  color: #ffffff;
+    padding-left: 50px;
+    font-size: 15px;
 }
 .awards{
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 20px;
     box-shadow:  20px 20px 60px #31364d,
              -20px -20px 60px #434a68;
@@ -206,25 +207,21 @@ margin-bottom: 200px;
   
 }
 .awards img{
-    border-radius:20px;
+    border-radius:10px;
     width: 30%;
     height: auto;
 }
 .awards h3{
     color: #ffffff;
     padding-left: 50px;
+    font-size: 15px;
 }
 
-.projects{
-    border-radius: 10px;
-    padding: 20px;
-    /* background: #ffffff; */
-    display:flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  
+.projects {
+  display: flex;
+  justify-content: space-around;
 }
+
 .card {
     box-shadow:  20px 20px 60px #31364d,
              -20px -20px 60px #434a68;
@@ -235,6 +232,8 @@ margin-bottom: 200px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  align-items: center; 
+  justify-content: center;
 }
 
 .card span {
@@ -243,10 +242,11 @@ margin-bottom: 200px;
   text-align: center;
   display: block;
   font-size: 1em;
+  /* padding: 10px; */
 }
 
 .card .info {
-  font-weight: 400;
+  font-weight:300;
   color: white;
   display: block;
   text-align: center;
@@ -254,12 +254,24 @@ margin-bottom: 200px;
   margin: 1em;
 }
 
-.card .img {
-  width: 4.8em;
-  height: 4.8em;
-  background: white;
+.dp {
+  width: 100px;
+  height: 100px;
+  background: #f0f0f0; /* You can set a background color or an image */
   border-radius: 15px;
-  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.dp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
 }
 
 .card a:hover {
@@ -305,7 +317,7 @@ margin-bottom: 200px;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-  border-radius: 10px;
+  border-radius: 1px;
 }
 
 .image-grid-col-2 {
@@ -335,14 +347,14 @@ margin-bottom: 200px;
 	}
   h2{
   margin-left: 0px;
-    font-size: 20px;
+    font-size: 30px;
     color: white;
     padding-bottom: 20px;
     padding-top: 30px;
 }
 .head h1 {
   font-size: 40px;
-  color: white;
+  color: rgb(207, 113, 113);
   
 }
 .head p{
@@ -366,14 +378,13 @@ margin-bottom: 200px;
     border-radius: 10px;
     width: 100%;
     height: auto;
-    padding-top: 20px;
+    padding-bottom: 20px;
     
 }
 .about h3{
     color: #ffffff;
     font-size: 10px;
     text-align: start;
-    padding-right: 0px;
   }
 .awards{
   border-radius: 10px;
@@ -421,8 +432,8 @@ margin-bottom: 200px;
           <ul class="menu">
             <li><a href="#Home">Home</a></li>
             <li><a href="#About">About</a></li>
-            <li><a href="#Projects">Projects</a></li>
             <li><a href="#Awards">Awards</a></li>
+            <li><a href="#Projects">Projects</a></li>
             <li><a href="#Photograph">Photographs</a></li>
           </ul>
         </div>
@@ -466,42 +477,55 @@ margin-bottom: 200px;
 </div>
 </section>
 <section id="About">
-<h2>About Me</h2>
+<h2>About Me.</h2>
 <div class="about">
-    <h3>Thushar, an intermediate Flutter developer with a passion for crafting dynamic and engaging mobile applications. Beyond coding, he is a hardcore travel enthusiast, 
-        seeking inspiration from diverse cultures and landscapes around the globe. As a beginner-level photographer, Thushar captures the beauty of his journeys through a lens, blending his technical skills with a keen eye for visual storytelling. With a unique blend of technical expertise and a love for exploration, Thushar is on a journey to seamlessly merge the worlds of technology, travel, and photography.</h3>
-    <img src="DSCN2952.JPG">
+  <img src="DSCN2952.JPG">
+    <h3>Hi there! I'm Thushar, an intermediate Flutter developer who's all about crafting dynamic and engaging mobile applications. Beyond the world of coding, I'm a hardcore travel enthusiast, constantly seeking inspiration from diverse cultures and landscapes around the globe.
+      As a beginner-level photographer, I love capturing the beauty of my journeys through a lens. It's not just about technical skills for me; I have a keen eye for visual storytelling, and I believe in blending the art of photography with my passion for technology.
+      I'm on a unique journey, working to seamlessly merge the worlds of technology, travel, and photography. It's not just about writing code for me; it's about creating experiences that resonate with people, inspired by the incredible diversity our world has to offer. Come along on this adventure with me!</h3>    
 </div>
 </section>             
 <br><br><br><br>
 <section id="Awards">
-<h2>Awards</h2>
+<h2>Awards.</h2>
 <div class="awards">
-    <img src="DSCN2952.JPG">
+    <img src="IMG_9562.jpeg">
     <h3>The record for covering the maximum number of Indian states and union territories in a solo roundtrip motorcycle expedition was set by T. Thushar (born on March 21, 2004) of Tiruvallur, Tamil Nadu. He started his expedition on May 18, 2023 at 5.28 am from Ayanambakkam (Chennai) and completed it at 7.49 pm at Ayanambakkam (Chennai) on June 18, 2023; covering 21 Indian states and 4 union territories (12,521.8 km) in 31 days on his Royal Enfield Thunderbird 350 at the age of 19 years, 3 months and 13 days as confirmed on July 3, 2023.</h3>
 </div>
 </section>
 <br><br><br><br>
 <section id="Projects">
-<h2>Projects</h2>
+<h2>Projects.</h2>
   <div class="projects">
     <div class="card">
-        <div class="img"></div>
+        <div class="dp">
+          <img src="joke_generator.jpg">
+        </div>
         <span>Random Joke Generator</span>
         <p class="info">Simple Joke Generator in flutter using rest api</p>
         <a href="https://thushar2103.github.io/Flutter-joke-generator/"><button>View Website</button></a>
       </div>
       <div class="card">
-        <div class="img"></div>
+        <div class="dp">
+          <img src="calculator-7832583_640.png">
+        </div>
         <span>Simple Calculator</span>
         <p class="info">Simple Calculator app developed using flutter</p>
       <a href="https://github.com/Thushar2103/simple-flutter-calculator-app"><button>View Repository</button></a>
+      </div>
+      <div class="card">
+        <div class="dp">
+          <img src="clinnectlogo.png">
+        </div>
+        <span>Clinnect</span>
+        <p class="info">An vision of connecting multiple clinics and small hospitals into an platform developed using flutter and django</p>
+        <a href=""><button>View Website</button></a>
       </div>
       
 </div></section>
 <br><br><br><br>
 <section id="Photograph">
-<h2>Photographs</h2>
+<h2>Photograph.</h2>
 <div class="image-grid">
   <img class="image-grid-col-2 image-grid-row-2" src="img1.JPG" alt="architecture">
   <img src="img2.JPG" alt="architecture">
