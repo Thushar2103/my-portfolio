@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
     <title>Portfolio</title>
 </head>
 <style>
+  html{
+     scroll-behavior:smooth; 
+   }
     *{
     margin: 0;
     padding: 0;
@@ -83,6 +88,8 @@ margin-bottom: 200px;
 
 
 .head h1 {
+  font-family: "pacifico";
+  font-weight: 50;
   font-size: 90px;
   color: white;
   
@@ -166,7 +173,7 @@ margin-bottom: 200px;
 }
 
 .about{
-    border-radius: 50px;
+    border-radius: 20px;
     padding: 20px;
     box-shadow:  20px 20px 60px #31364d,
              -20px -20px 60px #434a68;
@@ -178,7 +185,7 @@ margin-bottom: 200px;
   
 }
 .about img{
-    border-radius: 50px;
+    border-radius: 20px;
     width: 30%;
     height: auto;
 }
@@ -187,7 +194,7 @@ margin-bottom: 200px;
     padding-right: 50px;
 }
 .awards{
-    border-radius: 50px;
+    border-radius: 20px;
     padding: 20px;
     box-shadow:  20px 20px 60px #31364d,
              -20px -20px 60px #434a68;
@@ -199,7 +206,7 @@ margin-bottom: 200px;
   
 }
 .awards img{
-    border-radius: 50px;
+    border-radius:20px;
     width: 30%;
     height: auto;
 }
@@ -298,7 +305,7 @@ margin-bottom: 200px;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .image-grid-col-2 {
@@ -315,6 +322,13 @@ margin-bottom: 200px;
     flex: 100%;
     max-width: 100%;
   } */
+
+  .navbar .menu li a{
+  color: #ffffff;
+  font-size: 10px;
+  font-weight:900;
+  text-decoration: none;
+}
   .image-grid {
 		--num-cols: 2;
 		--row-height: 200px;
@@ -406,13 +420,15 @@ margin-bottom: 200px;
             </div> -->
           <ul class="menu">
             <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
             <li><a href="#Projects">Projects</a></li>
             <li><a href="#Awards">Awards</a></li>
-            <li><a href="#Contact">Contact</a></li>
+            <li><a href="#Photograph">Photographs</a></li>
           </ul>
         </div>
       </nav>
 <main>
+  <section id="Home">
     <div class="head">
         <h1>I'm,Thushar</h1>
         <br>
@@ -447,22 +463,28 @@ margin-bottom: 200px;
           </a>
         </div>   
     <!-- <img src="7D4B7E89-B303-4E0A-AD1B-454C2B253C16-removebg-preview.png" alt=""> -->
-</div>             
+</div>
+</section>
+<section id="About">
 <h2>About Me</h2>
 <div class="about">
     <h3>Thushar, an intermediate Flutter developer with a passion for crafting dynamic and engaging mobile applications. Beyond coding, he is a hardcore travel enthusiast, 
         seeking inspiration from diverse cultures and landscapes around the globe. As a beginner-level photographer, Thushar captures the beauty of his journeys through a lens, blending his technical skills with a keen eye for visual storytelling. With a unique blend of technical expertise and a love for exploration, Thushar is on a journey to seamlessly merge the worlds of technology, travel, and photography.</h3>
     <img src="DSCN2952.JPG">
 </div>
+</section>             
 <br><br><br><br>
+<section id="Awards">
 <h2>Awards</h2>
 <div class="awards">
     <img src="DSCN2952.JPG">
     <h3>The record for covering the maximum number of Indian states and union territories in a solo roundtrip motorcycle expedition was set by T. Thushar (born on March 21, 2004) of Tiruvallur, Tamil Nadu. He started his expedition on May 18, 2023 at 5.28 am from Ayanambakkam (Chennai) and completed it at 7.49 pm at Ayanambakkam (Chennai) on June 18, 2023; covering 21 Indian states and 4 union territories (12,521.8 km) in 31 days on his Royal Enfield Thunderbird 350 at the age of 19 years, 3 months and 13 days as confirmed on July 3, 2023.</h3>
 </div>
+</section>
 <br><br><br><br>
+<section id="Projects">
 <h2>Projects</h2>
-<div class="projects">
+  <div class="projects">
     <div class="card">
         <div class="img"></div>
         <span>Random Joke Generator</span>
@@ -476,8 +498,9 @@ margin-bottom: 200px;
       <a href="https://github.com/Thushar2103/simple-flutter-calculator-app"><button>View Repository</button></a>
       </div>
       
-</div>
+</div></section>
 <br><br><br><br>
+<section id="Photograph">
 <h2>Photographs</h2>
 <div class="image-grid">
   <img class="image-grid-col-2 image-grid-row-2" src="img1.JPG" alt="architecture">
@@ -486,6 +509,7 @@ margin-bottom: 200px;
   <img src="img4.JPG" alt="architecture">
   <img src="img3.JPG" alt="architecture">
 </div>
+</section>
 <br><br><br><br>
 </main>
         </body>
