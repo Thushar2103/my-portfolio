@@ -280,46 +280,116 @@ margin-bottom: 200px;
   color: white;
   cursor: pointer;
 }
-.gallery {
-    /* box-shadow:  20px 20px 60px #31364d,
-             -20px -20px 60px #434a68; */
-    border-radius: 10px;
-    padding: 20px;
-    /* background: #ffffff; */
-    /* display:block;
-  align-items: center;
-  justify-content: space-evenly; */
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-  align-items: center;
-  justify-content: center;
+.image-grid {
+	--gap: 16px;
+	--num-cols: 4;
+	--row-height: 300px;
+
+	box-sizing: border-box;
+	padding: var(--gap);
+
+	display: grid;
+	grid-template-columns: repeat(var(--num-cols), 1fr);
+	grid-auto-rows: var(--row-height);
+	gap: var(--gap);
 }
 
-/* Create four equal columns that sits next to each other */
-.column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+.image-grid>img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  border-radius: 20px;
 }
 
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-  border-radius: 10px;
+.image-grid-col-2 {
+	grid-column: span 2;
 }
 
-
+.image-grid-row-2 {
+	grid-row: span 2;
+}
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .column {
+  /* .column {
     flex: 100%;
     max-width: 100%;
-  }
+  } */
+  .image-grid {
+		--num-cols: 2;
+		--row-height: 200px;
+	}
+  h2{
+  margin-left: 0px;
+    font-size: 20px;
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+.head h1 {
+  font-size: 40px;
+  color: white;
+  
+}
+.head p{
+    /* padding-top: 10px; */
+    font-size: 10px;
+    color: white;
+    align-items: end;
+    justify-content: end;
+}
+.about{
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow:  20px 20px 60px #31364d,
+             -20px -20px 60px #434a68;
+    /* background: #ffffff; */
+    display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;  
+}
+.about img{
+    border-radius: 10px;
+    width: 30%;
+    height: auto;
+}
+.about p{
+    color: #ffffff;
+    font-size: 6px;
+}
+.awards{
+  border-radius: 10px;
+    padding: 10px;
+    box-shadow:  20px 20px 60px #31364d,
+             -20px -20px 60px #434a68;
+    /* background: #ffffff; */
+    display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;  
+  
+}
+.awards img{
+  border-radius: 10px;
+    width: 30%;
+    height: auto;
+}
+.awards p{
+    color: #ffffff;
+    font-size: 6px;
+}
+.projects{
+    border-radius: 10px;
+    padding: 20px;
+    /* background: #ffffff; */
+    display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  
+}
 }
 </style>
 <body>
@@ -403,27 +473,12 @@ margin-bottom: 200px;
 </div>
 <br><br><br><br>
 <h2>Photographs</h2>
-<div class="gallery">
-    <div class="row">
-        <div class="column">
-          <img src="img1.jpg">
-          <img src="img3.jpg">
-          <img src="img5.jpg">
-          <img src="img2.jpg">
-        </div>
-        <div class="column">
-            <img src="img2.jpg">
-            <img src="img4.jpg">
-            <img src="img5.jpg">
-            <img src="img1.jpg">
-        </div>
-        <div class="column">
-            <img src="img1.jpg">
-            <img src="img3.jpg">
-            <img src="img4.jpg">
-            <img src="img5.jpg">
-        </div>
-      </div>
+<div class="image-grid">
+  <img class="image-grid-col-2 image-grid-row-2" src="img1.JPG" alt="architecture">
+  <img src="img2.JPG" alt="architecture">
+  <img src="img5.JPG" alt="architecture">
+  <img src="img4.JPG" alt="architecture">
+  <img src="img3.JPG" alt="architecture">
 </div>
 <br><br><br><br>
 </main>
